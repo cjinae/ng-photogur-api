@@ -5,7 +5,10 @@ NgPhotogur::Application.routes.draw do
     end
 end
 
-root :to => "static#start"
+match '*anything' =? 'static#start'
+root :to => "static#start"   # these are points of entry into the appliation
+
+
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
