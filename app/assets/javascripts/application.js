@@ -11,6 +11,11 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require jquery_ujs
+//= require hamlcoffee
 //= require angular
 //= require angular-resource
+
+// Photogur Appliaction
+//= require app/initialize
+//= require_tree ../templates
+//= require_tree ./app/controllers
