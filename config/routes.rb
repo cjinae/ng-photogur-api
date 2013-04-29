@@ -3,7 +3,9 @@ NgPhotogur::Application.routes.draw do
     namespace :v1 do
       resources :pictures
     end
-  end
+end
+
+root :to => "static#start"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
