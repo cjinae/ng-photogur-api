@@ -5,7 +5,7 @@ NgPhotogur::Application.routes.draw do
     end
 end
 
-match '*anything' =? 'static#start'
+match '*anything' => 'static#start'
 root :to => "static#start"   # these are points of entry into the appliation
 
 

@@ -1,6 +1,6 @@
 # /app/assets/javascripts/photogur/initialize.js.coffee
 
-@photogur = angular.module('photogur', [])
+@photogur = angular.module('photogur', ['ngResource'])
 @photogur.config(($routeProvider, $locationProvider) ->
 
 	 # Enable HTML5 history support. For browsers that support HTML5 history this means
@@ -14,6 +14,7 @@
 	 $locationProvider.html5Mode(true)
 
 	 # Set up the application routes. This is similar to Rails' /config/routes.rb
+	 # The order matters:
 	 $routeProvider
 	 .when("/",                  {templateUrl: "pictures/index", controller: "PicturesController"})
 	 .when('/pictures',          {templateUrl: "pictures/index", controller: "PicturesController"})
