@@ -14,6 +14,7 @@
 	 $locationProvider.html5Mode(true)
 
 	 # Set up the application routes. This is similar to Rails' /config/routes.rb
+	 # The controllers used here is not convension, you can use any name and however many controlles
 	 # The order matters:
 	 $routeProvider
 	 .when("/",                  {templateUrl: "pictures/index", controller: "PicturesController"})

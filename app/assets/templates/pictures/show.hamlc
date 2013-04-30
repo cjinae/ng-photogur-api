@@ -1,5 +1,4 @@
 %h1 Page is show.hamlc
 
-%div.picture{:"ng-repeat" => "image in pictures"}
 %h1 {{picture.title}}
 %img{:"ng-src" => "{{picture.url}}"}

@@ -1,5 +1,5 @@
 @photogur.controller("PicturesController", ($scope, Picture) ->
- 	$scope.name = "Homer Simpson"
+#  	$scope.name = "Homer Simpson"
  	
   # console.log "picture controller is live!"
   # scope.log $scope
@@ -7,8 +7,10 @@
  	# 	console.log "Name change to #{$scope.name}"
  	# )
 
-  $scope.isHomer = -> 
-    return $scope.name == 'homer'
+  # $scope.isHomer = -> 
+  #   return $scope.name == 'homer'
+
+  # $scope.newPicture = {}
 
  	$scope.pictures = Picture.query(
  		(data) ->
@@ -16,7 +18,8 @@
  		,
  		(data) ->
  			alert("Could not get Picture data.")
+ 	)
 
- 		)
- 	window.Picture = Picture
+ 	$scope.savePicture = ->
+ 		alert "The picture is", $scope.newPicture
 )
