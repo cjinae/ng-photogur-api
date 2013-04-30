@@ -10,6 +10,13 @@
   $scope.isHomer = -> 
     return $scope.name == 'homer'
 
- 	$scope.pictures = Picture.query()
- 	
+ 	$scope.pictures = Picture.query(
+ 		(data) ->
+ 			console.log("success!!")
+ 		,
+ 		(data) ->
+ 			alert("Could not get Picture data.")
+
+ 		)
+ 	window.Picture = Picture
 )
